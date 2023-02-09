@@ -1,0 +1,915 @@
+body{
+    background-color: rgb(26, 26, 26);
+}
+
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------- COMPONENTI -----------------------------------*/
+
+/*INPUT ===========================================================*/
+.input{
+   width: 265px;
+   height: 25px;
+   padding-left: 6px;
+}
+
+/*BOX ACCOUNT ======================================================*/
+.boxAccount{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.boxAccountImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: monospace;
+    background-color: rgb(175, 175, 0);
+    border: 0.5px solid ;
+    border-radius: 5px;
+    height: 80px;
+    width: 80px;
+    min-width: 80px;
+    margin: 15px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    border: 0.5px solid black;
+    cursor: pointer;
+}.boxAccountImg:hover{background-color: rgb(255, 255, 255);}
+
+.boxAccountName{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    height: 20px;
+    margin: 10px;
+    margin-top: 0;
+}
+
+/*MODALS ============================================================*/
+
+/*MODAL-MODIFY-DELETE*/
+.modalBackGround{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(53, 53, 53, 0.522);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal{
+    width: 70%;
+    max-width: 350px;
+    height: 60%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 12px;
+    margin-left: 50%;
+    margin-right: 50%;
+    background-color: rgb(235, 235, 235);
+    padding: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0;
+    z-index: 100;
+}
+
+.modalTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1.5px solid;
+    border-top: 1.5px solid;
+    font-size: 17px;
+    border-radius: 4px;
+    width: 90%;
+    height: 8%;
+    margin-bottom: 10px;
+    background-color: rgba(156, 156, 156, 0.47);
+}
+
+.inputTitleModale{
+    border: none;
+    text-align: center;
+    font-size: 17px;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(211, 211, 211, 0.47);
+}
+
+.scrittaDescriptionModale{
+    width: 90%;
+    margin-top: 5px;
+}
+
+.textAreaModale{
+    width: 100%;
+    min-width: 100%;
+    max-height: 175px;
+    min-height: 175px;
+}
+
+.modalBody{
+    display: flex;
+    padding: 10px;
+    padding-top: 3px;
+    padding-left: 0;
+    height: 50%;
+    width: 90%;
+}
+
+.divLanguageModale{
+    margin-top: 15px;
+    width: 90%;
+    padding-top: 2px;
+}
+
+.selectModale{
+    margin-left: 3px;
+    border-bottom: 1px solid;
+    border-radius: 2px;
+    padding-left: 2px;
+    padding-bottom: 1px;
+    width: 70px;
+    cursor: pointer;
+}.selectModale:hover{background-color: rgb(195, 195, 195);}
+
+.scrittaModale{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.footerModale{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    margin-top: 20px;
+    width: 90%;
+    height: 25px;
+}
+
+.divButtonDelete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.buttonDeleteBook{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 3px;
+    width: 90px;
+    height: 27px;
+    font-size: 15px;
+    cursor: pointer;
+}.buttonDeleteBook:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 1px solid;
+}
+
+.divButtonModify{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.buttonModifyModal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(175, 175, 0);
+    color: white;
+    border-radius: 3px;
+    width: 90px;
+    height: 27px;
+    cursor: pointer;
+    font-size: 15px;
+}.buttonModifyModal:hover{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid;
+    color: rgb(175, 175, 0);
+}
+
+.divButtonClose{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+}
+
+.buttonCloseModal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: white;
+    border-radius: 3px;
+    width: 90px;
+    height: 27px;
+    cursor: pointer;
+    font-size: 15px;
+}.buttonCloseModal:hover{
+    background-color: rgb(213, 0, 0);
+    background-color: white;
+    border: 1px solid;
+    color: red;
+}
+
+/*MODAL-ADD*/
+
+.footerModalAdd{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    margin-top: 20px;
+    width: 90%;
+    height: 25px;
+}
+
+.divButtonAdd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.buttonAddModal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(175, 175, 0);
+    color: white;
+    border-radius: 3px;
+    width: 100px;
+    height: 27px;
+    cursor: pointer;
+    font-size: 18px;
+}.buttonAddModal:hover{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid;
+    color: rgb(175, 175, 0);
+}
+
+.divButtonClose{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.buttonCloseModal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: white;
+    border-radius: 3px;
+    width: 90px;
+    height: 27px;
+    cursor: pointer;
+    font-size: 15px;
+}.buttonCloseModal:hover{
+    background-color: rgb(213, 0, 0);
+    background-color: white;
+    border: 1px solid;
+    color: red;
+}
+
+/*MODALS-CONFIRM*/
+
+.divModalConfirm{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(53, 53, 53, 0.522);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modalConfirm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    border: 1px solid;
+    height: 75px;
+    width: 50%;
+    max-width: 200px;
+    max-height: 80px;
+    background-color: white;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 12px;
+}
+
+.scrittaModalConfirm{
+    font-size: 20px ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.divYesNo{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3px;
+    height: 50px;
+    width: 100%;
+}
+
+.buttonYesNo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: sans-serif;
+    width: 50px;
+    height: 20px;
+    border: 1px solid;
+    margin: 10px;
+    padding: 3px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(55, 55, 255);
+    color: white;
+    cursor: pointer;
+}.buttonYesNo:hover{
+    background-color: white;
+    color: rgb(55, 55, 255);
+    border: 1px solid;
+}
+
+.divAlert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(234, 0, 0);
+    background-color: rgba(255, 0, 0, 0.170);
+    border-radius: 2px;
+    padding: 2px;
+    margin-top: 2px;
+    width: 50%;
+    max-width: 300px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/*------------------------------FINE COMPONENTI----------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------*/
+/*---------------------------- PAGINA PRINCIPALE --------------------------------*/
+
+/*header ===============================================*/
+
+.header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.divHeader{
+    display: flex;
+    justify-content: center;
+    height: 45px;
+    background-color: rgb(0, 78, 161);
+}
+
+.divLeft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    width: 140px;
+    font-size: x-large;
+}
+
+.divHeaderFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid black;
+    border-bottom: 0.5px solid rgb(93, 93, 93);
+    height: 23px;
+    background-color:  rgb(47, 120, 188);
+    padding-left: 10px;
+    font-weight: 1000;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.divAccountsButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    position: absolute;
+    left: 0;
+    margin-left: 10px;
+    cursor: pointer;
+}.divAccountsButton:hover{color: rgba(255, 255, 255, 0.825);}
+
+.divScritta{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.divSingInButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: small;
+    right: 0;
+    margin-right: 10px;
+    height: 18px;
+    width: 50px;
+    cursor: pointer;
+}.divSingInButton:hover{color: rgba(255, 255, 255, 0.825);}
+
+
+
+/*body===============================================*/
+
+.createYourAcoountFirstTime{
+    color: white;
+}
+
+.buttonCreateYourAccount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    padding: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}.buttonCreateYourAccount:hover{
+    background-color: white;
+    color: black;
+}
+
+.divContainerBoxAccounts{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: fit-content;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+    margin-top: 85px;
+    margin-left: 10px;
+}
+
+#divBoxAccounts{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 100px;
+    width: 100%;
+    height: 50%;
+}
+
+/*footer===============================================*/
+.footer{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height:40px ;
+    bottom: 0;
+    background-color: rgb(57, 80, 105) ;
+}
+
+/*--------------------------- FINE PAGINA PRINCIPALE ----------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------------*/
+/*--------------------------------PAGINA LOGIN-----------------------------------*/
+
+.divContainerPageLogIn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bodyPageLogIn{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: fit-content;
+    width: 95%;
+    left: 0;
+    right: 0;
+    margin-top: 85px;
+    padding: 10px;
+    padding-left: 15px;
+}
+
+.inputPageLogIn{
+    margin-top: 7px;
+    width: 265px;
+    height: 25px;
+    padding-left: 5px;
+}
+
+.buttonLogIn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7px;
+    height: 20px;
+    width: 50px;
+    padding: 1px;
+    padding-bottom: 2px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(39, 39, 255);
+}.buttonLogIn:hover{
+    background-color: rgb(255, 255, 255);
+    color: blue;
+}
+
+.divMessaggioPasswordSbagliata{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.messaggioPasswordSbagliata{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 70%;
+    height: 30px;
+    color: rgb(234, 0, 0);
+    background-color: rgba(255, 0, 0, 0.170);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+/*-------------------------------FINE PAGINA LOGIN-------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------------*/
+/*---------------------------------PAGINA SINGIN---------------------------------*/
+
+.divContainerPageSingIn{
+    display: flex;
+    justify-content: center;
+}
+
+.spanTiltePageSingIn{
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+
+.bodyPageSingIn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: fit-content;
+    width: 100%;
+    margin-top: 90px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.buttonSingIn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 50px;
+    padding: 1px;
+    padding-bottom: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(39, 39, 255);
+}.buttonSingIn:hover{
+     background-color: rgb(255, 255, 255);
+    color: blue;
+}
+
+/*-------------------------------FINE PAGINA SINGIN------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------------*/
+/*--------------------------------PAGINA ACCOUNT---------------------------------*/
+
+.divContainerAccount{
+    display: flex;
+    justify-content: center;
+}
+
+/*HEADER ===============================================*/
+
+.headerAccount{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.divHeaderAccount{
+    display: flex;
+    height: 45px;
+    background-color: rgb(0, 78, 161);
+}
+
+.divLeftAccount{
+    font-size: large;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    width: 25%;
+    min-width: 100px;
+}
+
+.spanBookShelf{
+    font-size: 22px;
+    font-weight: 500s;
+}
+
+.divCenterAccount{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.inputSearchBooks{
+    width: 265px;
+    height: 28px;
+    padding-left: 6px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border: none;
+    outline: none;
+ }
+
+.divMagnifyingLens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: rgb(175, 175, 0);
+    cursor: pointer;
+}.divMagnifyingLens:hover{
+    background-color: rgb(128, 128, 0);
+}
+
+.divRightAccount{
+    font-size: large;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    width: 25%;
+}
+
+.divHeaderFooterAccount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(231, 231, 231);
+    border-top: 1px solid black;
+    border-bottom: 0.5px solid rgb(93, 93, 93);
+    height: 23px;
+    background-color:  rgb(47, 120, 188);
+    padding-left: 10px;
+    font-weight: 1000;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.exitButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: small;
+    color: black;
+    right: 0;
+    margin-right: 10px;
+    height: 18px;
+    width: 50px;
+    cursor: pointer;
+}.exitButton:hover{color: rgba(255, 255, 255, 0.825);}
+
+.settingsButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: small;
+    color: black;
+    left: 0;
+    margin-left: 10px;
+    height: 18px;
+    width: fit-content;
+    cursor: pointer;
+}.settingsButton:hover{color: rgba(255, 255, 255, 0.825);}
+
+/*BODY ===============================================*/
+
+.containerBodyAccount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 70px;
+    height: fit-content;
+    left: 0;
+    right: 0;
+}
+
+.bodyLeftAccount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    margin-right: 8px;
+    width: 32%;
+    height: 475px;
+    border-radius: 5px;
+    background-color: rgb(231, 231, 231) ;
+}
+
+.divBodyAccount{
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: rgb(231, 231, 231);
+    padding: 3px;
+    height: 470px;
+    width: 50%;
+    max-width: 350px;
+    min-width: 200px;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: auto;
+}
+
+.bodyRigthAccount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    margin-left: 8px;
+    width: 32%;
+    height: 475px;
+    border-radius: 5px;
+    background-color: rgb(231, 231, 231) ;
+}
+
+.divButtonAddBook{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid;
+    margin-bottom: 10px;
+}
+
+.buttonSort{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    padding: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 2px;
+    margin-bottom: 3px;
+    width: 20%;
+    background-color: darkorange;
+    cursor: pointer;
+}.buttonSort:hover{
+    background-color: rgb(255, 255, 255);
+    color: darkorange;
+}
+
+.buttonAddBook{
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(175, 175, 0);
+    padding: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-bottom: 3px;
+    margin-right: 3px;
+    border-radius: 2px;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-weight: 100;
+    width: 80%;
+    cursor: pointer;
+}.buttonAddBook:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(175, 175, 0);
+}
+
+.titleBook{
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    border-bottom: 1.5px solid;
+    border-color: rgb(170, 170, 170);
+    border-radius: 3px;
+    cursor: pointer;
+}.titleBook:hover{background-color: rgb(212, 212, 212);}
+
+/*-------------------------------FINE PAGINA ACCOUNT-----------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------------*/
+/*--------------------------------ACCOUNT SETTINGS-------------------------------*/
+
+.divDeleteAccountsButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    cursor: pointer;
+}.divDeleteAccountsButton:hover{
+    color: rgb(151, 18, 18);
+    font-size: 15px;
+}
+
+.buttonConfirm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 60px;
+    padding: 1px;
+    padding-bottom: 2px;
+    margin-top: 10px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(39, 39, 255);
+}.buttonConfirm:hover{
+     background-color: rgb(255, 255, 255);
+    color: blue;
+}
+
+/*-----------------------------FINE ACCOUNT SETTINGS-----------------------------*/
+/*-------------------------------------------------------------------------------*/
